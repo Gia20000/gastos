@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name= "viewport" content="width=device-width, initial-scale=1">
+<head>
+<title>Inventario</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+  <h1>Inventario</h1>
+ 
+  <div class="mb-3">
+    <label for="ref" class="form-label">Referencia</label>
+    <input type="text" class="form-control" id="ref" aria-describedby="referencia">    
+  </div>
+  <div class="mb-3">
+    <label for="cantidad" class="form-label">Cantidad</label>
+    <input type="number" class="form-control" id="cantidad" aria-describedby="cantidad">    
+  </div>
+  <div class="mb-3">
+    <label for="cantidad" class="form-label">Cantidad</label>
+    <input type="number" class="form-control" id="cantidad" aria-describedby="cantidad">    
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button class="btn btn-primary" id="boton"onclick="grabar()">Registrar</button>
+
+</body>
+<span id="thank_you" hidden="true">El registro se ha guardado.</span>
+
+
+</div>
+
+
+
+
+
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+
+
+</script>-->
+
+
+<script>
+function grabar(){
+  var registroSalida = {}
+  registroSalida.ref =document.getElementById("ref").value
+  registroSalida.cantidad =document.getElementById("cantidad").value
+  //console.log(ref)
+  google.script.run.escribirSh(registroSalida)
+}
+
+ </script>
+
+
+
+
+
